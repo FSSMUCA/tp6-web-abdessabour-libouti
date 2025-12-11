@@ -11,7 +11,7 @@ main {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed; /* optionnel - fixe l'image pendant le défilement */
-    
+
 }
 header {
     display: flex;             /* permet l’alignement horizontal */
@@ -80,6 +80,7 @@ button:hover {
 
 #error-section {
     border-left-color: #ef4444;
+    margin-bottom: 0px;
 }
 
 /* --- CARD POUR L’HISTORIQUE --- */
@@ -171,7 +172,7 @@ footer {
     padding: 15px;
     background: #1e293b;
     color: white;
-    margin-top: 40px;
+    margin-top: 0px ;
 }
 
 /* --- RESPONSIVE DESIGN --- */
