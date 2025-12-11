@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body>
+<header>
+     <h1>Calculatrice FSSM</h1>
+    <nav>
+        <ul>
+            <li><a href="#"onclick="showPage('calculatrice-section')">Accueil</a></li>
+            <li><a href="#" onclick="showPage('history-section')">Historique</a></li>
+            <li><a href="#"onclick="showPage('Histoire-section')"> Histoire</a></li>
+            <li><a href="https://www.uca.ma/fssm/fr" target="_blank">FSSM</a></li>
+
+
+    </nav>
+</header>
+
+    <main>
+        <div id="calculatrice-section"class="page active">
+            <h1> Bienvenue dans votre Calculatrice FSSM</h1>
+        <form  id="monFormulaire"action="calculer" method="post">
+            <label for="nombreA">Nombre A :</label>
+            <input type="number" id="nombreA" name="nombre1" placeholder="Entrez le premier nombre" required>
+            <br><br>
+            <label for="nombreB">Nombre B:</label>
+            <input type="number" id="nombreB" name="nombre2" placeholder="Entrez le deuxième nombre" required>
+            <br> <br>
+            <label for="operation"></label>
+            <select id="operation" name="operation" required>
+                <option value="" disabled selected>Choisir une opération</option>
+                <option value="addition">Addition</option>
+                <option value="soustraction">Soustraction</option>
+                <option value="multiplication">Multiplication</option>
+                <option value="division">Division</option>
+            </select>
+            <br><br>
+            <button type ="submit">Calculer</button>
+        </form>
+            <section id="result-section">
+                <h2 >Résultat :</h2>
+             <output id="resultOutput" for="nombreA nombreB operation">--</output>
+            </section>
+            <section id="error-section">
+                <h2>Erreur:</h2>
+                <output id="errorOutput" for="nombreA nombreB operation"></output>
+                </section>
+                </div>
+                <div id="history-section"class="page">
+                    <h1>Historique des calculs:</h1>
+                     <button id="clearAllHistory" >Supprimer tout l'historique </button>
+                    <ul id="historyList">
+                    </ul>
+                </div>
+        <div id="Histoire-section"class="page">
+            <h1>Histoire de la Calculatrice </h1>
+            <p>L'histoire de la calculatrice commence avec des outils anciens comme le boulier, évolue avec les machines mécaniques du 17ème siècle (Pascaline de Blaise Pascal en 1642, machines de Leibniz), puis avec les calculateurs industriels (Arithmomètre de Colmar en 1820) et de poche (Curta), pour aboutir aux calculateurs électroniques des 20ème et 21ème siècles, intégrant circuits intégrés et programmation (TI, Casio, HP), devenant des applications logicielles omniprésentes. </p>
+            <h2>Les débuts mécaniques (17ème - 19ème siècle) </h2>
+            <ul>
+                <li>1623 : Wilhelm Schickard invente une machine à calculer, peu après les premières idées d'un système mécanique.</li>
+                 <li>1642 : Blaise Pascal invente la Pascaline, une machine capable d'additionner et de soustraire pour aider son père percepteur d'impôts, marquant le début du calcul mécanique.</li>
+                  <li>1673 : Gottfried Leibniz développe une machine qui ajoute la multiplication et la division automatiques grâce à son fameux cylindre cannelé.</li>
+                   <li>1820 : Thomas de Colmar crée le premier calculateur industriel, l'Arithmomètre, commercialisé en 1851.</li>
+                   <li>19ème siècle : Des machines comme celle de Hahn et Schuster effectuent les quatre opérations grâce à des engrenages. </li>
+            </ul>
+            <h2>L'ère électronique et moderne (20ème siècle à aujourd'hui)</h2>
+            <ul>
+                <li>Début 20ème : Les tabulatrices de Herman Hollerith (précurseur d'IBM) facilitent le traitement de grandes données, ouvrant la voie à l'informatique.</li>
+                <li>Années 1950-1960 : L'invention du circuit intégré (par Jack Kilby en 1959) révolutionne la taille et la puissance.</li>
+                <li>Années 1970 : Les premières calculatrices électroniques de poche (comme la Curta) apparaissent, suivies des calculatrices scientifiques programmables, devenant populaires et acceptées dans les examens comme le baccalauréat à partir de 1979.</li>
+                <li>Aujourd'hui : Les calculatrices sont intégrées dans les smartphones, ordinateurs et applications, offrant des fonctionnalités de programmation avancées (Python, etc.), tout en conservant des modèles physiques pour des besoins spécifiques. </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Calculatrice FSSM. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
