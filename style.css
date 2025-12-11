@@ -1,0 +1,198 @@
+.page {
+    display: none;   /* caché par défaut */
+}
+
+.page.active {
+    display: block;  /* la section active s'affiche */
+}
+main {
+    background-image: url('https://semet-fssm.com/assets/images/img5.jpeg');
+    background-size: cover; /* ou contain selon l'effet voulu */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* optionnel - fixe l'image pendant le défilement */
+
+}
+header {
+    display: flex;             /* permet l’alignement horizontal */
+    justify-content: space-between;  /* espace entre titre et navbar */
+    align-items: center;       /* alignement vertical */
+    padding: 10px 20px;
+    background: #087e18;       /* optionnel */
+}
+.page.active h1{
+    text-align: center;
+    color:#087e18;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color:rgb(10, 8, 8);
+}
+nav a:hover {
+    color: #0ee64f;
+    transform: translateY(-2px);
+}
+form {
+    display: grid;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+input, select, button {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    font-size: 16px;
+}
+
+button {
+    background: #1e293b;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #334155;
+    transform: scale(1.03);
+}
+
+/* --- SECTION RESULT / ERREUR --- */
+#result-section, #error-section {
+    max-width: 400px;
+    margin: 20px auto;
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #09aa2c;
+}
+
+#error-section {
+    border-left-color: #ef4444;
+    margin-bottom: 0px;
+}
+
+/* --- CARD POUR L’HISTORIQUE --- */
+#clearAllHistory{
+    display: none; 
+    margin-bottom: 15px; 
+    padding: 8px 15px; 
+    background: #1e293b; 
+    color: white;
+     border: none;
+      border-radius: 4px; 
+    cursor: pointer;
+}
+#clearAllHistory:hover {
+    background: linear-gradient(135deg, #c82333, #bd2130);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(220, 53, 69, 0.3);
+}
+
+#clearAllHistory:active {
+    transform: translateY(0);
+}
+.delete-history-item {
+    background: linear-gradient(135deg, #181616, #491b1f);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+.delete-history-item:hover {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    transform: rotate(15deg) scale(1.1);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.delete-history-item:active {
+    transform: scale(0.95);
+}
+#history-section {
+    max-width: 500px;
+    margin: auto;
+}
+
+#historyList {
+    list-style: none;
+    margin-top: 20px;
+    display: grid;
+    gap: 15px;
+}
+
+/* Style card */
+#historyList li {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 6px solid #1aac21;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#historyList li:hover {
+    transform: translateX(5px);
+    background: #f0fff5;
+}
+
+/* --- HISTOIRE DE LA CALCULATRICE --- */
+#Histoire-section {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #1e293b;
+    color: white;
+    margin-top: 0px ;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    #Histoire-section {
+        width: 90%;
+    }
+}
